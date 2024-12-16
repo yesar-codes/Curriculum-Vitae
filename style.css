@@ -75,13 +75,116 @@ section h2 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* Footer Section */
 footer {
+    background: #262626;
     text-align: center;
-    padding: 1rem;
-    background-color: #333;
+    padding: 1.5rem 0;
     color: white;
     margin-top: 1rem;
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Social Media Icons */
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    position: relative;
+    display: inline-block;
+    color: #666;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    background: #171515;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+footer ul li:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    border-radius: 50%;
+    transform: scale(0.9);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+/* Icon Colors */
+footer ul li:nth-child(1):before {
+    background: #4267b2;
+}
+
+footer ul li:nth-child(2):before {
+    background: #1da1f2;
+}
+
+footer ul li:nth-child(3):before {
+    background: #e1306c;
+}
+
+footer ul li:nth-child(4):before {
+    background: #2867b2;
+}
+
+footer ul li:nth-child(5):before {
+    background: #ff0000;
+}
+
+/* Hover Effects */
+footer ul li:hover:before {
+    filter: blur(3px);
+    transform: scale(1.2);
+}
+
+footer ul li:hover {
+    box-shadow: 0 0 15px currentColor;
+    text-shadow: 0 0 15px currentColor;
+}
+
+footer ul li i {
+    color: white;
+    transition: 0.5s;
+}
+
+footer ul li:hover i {
+    color: currentColor;
+}
+
+/* Icon Colors on Hover */
+footer ul li:nth-child(1):hover {
+    color: #4267b2;
+}
+
+footer ul li:nth-child(2):hover {
+    color: #1da1f2;
+}
+
+footer ul li:nth-child(3):hover {
+    color: #e1306c;
+}
+
+footer ul li:nth-child(4):hover {
+    color: #2867b2;
+}
+
+footer ul li:nth-child(5):hover {
+    color: #ff0000;
 }
 
 /* Details Section */
