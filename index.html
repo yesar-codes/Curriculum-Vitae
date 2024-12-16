@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebenslauf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Mein Lebenslauf</h1>
+        <p>Bewege dein Gerät, um diesen Header interaktiv zu steuern!</p>
+    </header>
+
+    <main>
+        <!-- Über mich -->
+        <section id="about-me">
+            <h2>Über mich</h2>
+            <ul style="list-style-type: circle">
+                <li>Informatik Student</li>
+                <li>Interesse an Robotern und KI</li>
+                <li>Hobbymäßig Programmer</li>
+            </ul>
+        </section>
+
+        <!-- Fähigkeiten -->
+        <section id="skills">
+            <h2>Meine Fähigkeiten</h2>
+            <canvas id="skillsCanvas" style="width: 70%; height: auto;"></canvas>
+        </section>
+
+        <!-- Studien- und Projektorte -->
+        <section id="map-section">
+            <h2>Meine Studien- und Projektorte</h2>
+            <div id="map"></div>
+        </section>
+        <!-- Section for displaying details -->
+        <section id="details" style="display: none;"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mein Lebenslauf. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
