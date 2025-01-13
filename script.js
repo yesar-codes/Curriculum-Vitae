@@ -1,14 +1,17 @@
-// DEVICE ORIENTATION: Moves the header text
-if (window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', event => {
-        const header = document.querySelector('header h1');
-        const x = event.gamma; // Left to right
-        const y = event.beta; // Front to back
+// Dark mode toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelector('#skillsCanvas').classList.toggle('dark-mode');
+    document.querySelector('#map').classList.toggle('dark-mode');
+    document.querySelector('footer').classList.toggle('dark-mode');
 
-        // Apply transformation
-        header.style.transform = `rotateX(${y / 10}deg) rotateY(${x / 10}deg)`;
-    });
-}
+    // Update button text
+    darkModeToggle.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️'
+        : '🌙';
+});
 
 // CANVAS: Draw skills as a bar chart
 const canvas = document.getElementById('skillsCanvas');
@@ -16,11 +19,11 @@ const ctx = canvas.getContext('2d');
 
 // Skill Data
 const skills = [
-    { name: 'HTML', level: 60 },
-    { name: 'CSS', level: 40 },
-    { name: 'JS', level: 30 },
-    { name: 'Python', level: 80 },
-    { name: 'Java', level: 90 }
+    { name: 'HTML', level: 60 }, // Skill: HTML with proficiency level of 60% 
+    { name: 'CSS', level: 40 }, // Skill: CSS with proficiency level of 40%
+    { name: 'JS', level: 30 }, // Skill: JavaScript with proficiency level of 30%
+    { name: 'Python', level: 80 }, // Skill: Python with proficiency level of 80%
+    { name: 'Java', level: 90 } // Skill: Java with proficiency level of 90%
 ];
 
 // Draw the chart

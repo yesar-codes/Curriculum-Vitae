@@ -1,25 +1,37 @@
 <!DOCTYPE html>
+<!-- Website language is in german-->
 <html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lebenslauf</title>
+    <!-- Personal Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS for map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <!-- Font Awesome CSS for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
+
+    <!-- Heading of the website -->
     <header>
-        <h1>Mein Lebenslauf</h1>
+        <h1>
+            Mein Lebenslauf
+            <!-- Dark Mode Toggle Button -->
+            <button id="darkModeToggle">🌙</button>
+        </h1>
+        <!-- Shuriken to make good animation in the header -->
         <div class="shuriken"></div>
     </header>
 
     <main>
-        <!-- Über mich -->
+        <!-- Introduction -->
         <section id="about-me">
             <h2>Über mich</h2>
+            <!-- unordered list for stating the about me section-->
             <ul style="list-style-type: circle">
                 <li>Informatik Student</li>
                 <li>Interesse an Robotern und KI</li>
@@ -27,12 +39,13 @@
             </ul>
         </section>
 
-        <!-- Fähigkeiten -->
+        <!-- Skills section of the Curriculum Vitae to show what skills i have -->
         <section id="skills">
             <h2>Meine Fähigkeiten</h2>
             <canvas id="skillsCanvas" style="width: 70%; height: auto;"></canvas>
         </section>
 
+        <!-- Languages section of the Curriculum Vitae to show what languages i speak -->
         <section id="languages">
             <h2>Sprachen</h2>
             <ul style="list-style-type: circle">
@@ -43,15 +56,17 @@
             </ul>
         </section>
 
-        <!-- Studien- und Projektorte -->
+        <!-- Study and projects placces -->
         <section id="map-section">
             <h2>Meine Studien- und Projektorte</h2>
             <div id="map"></div>
         </section>
-        <!-- Section for displaying details -->
+        <!-- Section for displaying details of the projects-->
         <section id="details" style="display: none;"></section>
+        <!-- For further details generally hidden from people till the click on more details button-->
     </main>
 
+    <!-- Footer for social media accounts -->
     <footer>
         <ul>
             <li><i class="fab fa-facebook-f"></i></li>
@@ -62,7 +77,9 @@
         </ul>
     </footer>
 
+    <!-- External Javascript Libraries and scripts -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <!-- Internal Javascript -->
     <script src="script.js" defer></script>
 </body>
 
