@@ -31,7 +31,7 @@
     <!-- Heading of the website -->
     <header>
       <h1>
-        Mein Lebenslauf
+        Sarthak's Lebenslauf
         <!-- Dark Mode Toggle Button -->
         <button id="darkModeToggle">🌙</button>
       </h1>
@@ -76,14 +76,69 @@
       <!-- Section for displaying details of the projects-->
       <!-- For further details generally hidden from people till the click on more details button-->
       <section id="details" style="display: none"></section>
+      <!-- Hobbies Section -->
+      <section id="hobbies">
+        <h2>Meine Hobbies</h2>
+        <ul class="hobbies-list">
+          <li>
+            <span class="hobby-item" data-hobby="fitness">Fitnessstudio</span>
+            <div class="hobby-image-container">
+              <img
+                src="Fitnessstudio.jpg"
+                alt="Fitnessstudio"
+                class="hobby-image"
+              />
+              <button class="close-image">&times;</button>
+            </div>
+          </li>
+          <li>
+            <span class="hobby-item" data-hobby="travel">Reisen</span>
+            <div class="hobby-image-container">
+              <img src="Reisen.jpg" alt="Reisen" class="hobby-image" />
+              <button class="close-image">&times;</button>
+            </div>
+          </li>
+          <li>
+            <span class="hobby-item" data-hobby="gardening">Gärtern</span>
+            <div class="hobby-image-container">
+              <img src="Gärtern.jpg" alt="Gärtenn" class="hobby-image" />
+              <button class="close-image">&times;</button>
+            </div>
+          </li>
+          <li>
+            <span class="hobby-item" data-hobby="writing">Schreiben</span>
+            <div class="hobby-image-container">
+              <img src="Schreiben.jpg" alt="Schreiben" class="hobby-image" />
+              <button class="close-image">&times;</button>
+            </div>
+          </li>
+        </ul>
+      </section>
       <section id="qr-code-section">
         <h3>Lebenslauf herunterladen</h3>
         <div id="qr-code"></div>
       </section>
+      <div class="contact-form-wrapper">
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Nachricht:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Senden</button>
+        </form>
+      </div>
     </main>
 
-    <!-- Footer for social media accounts -->
+    <!-- Footer for social media accounts and impressum-->
     <footer>
+      <li id="impressum">
+        <a href="impressum.html" target="_blank">impressum</a>
+      </li>
       <ul>
         <li>
           <a

@@ -77,7 +77,10 @@ const locations = [
     lon: 8.4193626,
     title: "Karlsruhe Institute for Technology (KIT)",
     description: "Bachelor of Science in Computer Science",
-    performance: ["Linear Algebra", "DBMS", "Networking", "Automata Theory"],
+    performance: ["Linear Algebra",
+       "DBMS", 
+       "Networking", 
+       "Automata Theory"],
   },
   {
     lat: 47.667,
@@ -119,7 +122,10 @@ const locations = [
     lon: 77.699136,
     title: "St. Mary's Academy",
     description: "Klasse 12. Abitur",
-    performance: ["Physics", "Chemistry", "Mathematics", "Computer Science"],
+    performance: ["Physics",
+       "Chemistry",
+       "Mathematics",
+       "Computer Science"],
   },
 ];
 
@@ -197,3 +203,68 @@ const qrCode = new QRCodeStyling({
 
 // Render the QR code into the div
 qrCode.append(document.getElementById("qr-code"));
+
+// Create overlay element
+const overlay = document.createElement("div");
+overlay.className = "overlay";
+document.body.appendChild(overlay);
+
+// Add click event listeners to hobby items
+document.querySelectorAll(".hobby-item").forEach((item) => {
+  item.addEventListener("click", function () {
+    const container = this.parentElement.querySelector(
+      ".hobby-image-container"
+    );
+    container.style.display = "block";
+    overlay.style.display = "block";
+  });
+});
+
+// Add click event listeners to close buttons
+document.querySelectorAll(".close-image").forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const container = this.parentElement;
+    container.style.display = "none";
+    overlay.style.display = "none";
+  });
+});
+
+// Close image when clicking overlay
+overlay.addEventListener("click", function () {
+  document.querySelectorAll(".hobby-image-container").forEach((container) => {
+    container.style.display = "none";
+  });
+  overlay.style.display = "none";
+});
+
+// Close image when pressing Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".hobby-image-container").forEach((container) => {
+      container.style.display = "none";
+    });
+    overlay.style.display = "none";
+  }
+});
+
+// Contact form submission
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const senderEmail = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const emailRecipient = "udgvq@student.kit.edu";
+    const subject = encodeURIComponent(`Message from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${senderEmail}\n\nMessage:\n${message}`
+    );
+
+    const mailtoLink = `mailto:${emailRecipient}?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink; // Opens the default email client
+  });
