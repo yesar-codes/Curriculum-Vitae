@@ -1,86 +1,143 @@
 <!DOCTYPE html>
 <!-- Website language is in german-->
 <html lang="de">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lebenslauf</title>
     <!-- Personal Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Leaflet CSS for map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
     <!-- Font Awesome CSS for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
+    <!-- Curtain -->
+    <div id="curtain">
+      <div class="curtain-content">
+        <h1>Willkommen</h1>
+        <p>Ziehe hoch oder scrolle, um die Webseite zu betreten</p>
+      </div>
+    </div>
 
     <!-- Heading of the website -->
     <header>
-        <h1>
-            Mein Lebenslauf
-            <!-- Dark Mode Toggle Button -->
-            <button id="darkModeToggle">🌙</button>
-        </h1>
-        <!-- Shuriken to make good animation in the header -->
-        <div class="shuriken"></div>
+      <h1>
+        Mein Lebenslauf
+        <!-- Dark Mode Toggle Button -->
+        <button id="darkModeToggle">🌙</button>
+      </h1>
+      <!-- Shuriken to make good animation in the header -->
+      <div class="shuriken"></div>
     </header>
 
     <main>
-        <!-- Introduction -->
-        <section id="about-me">
-            <h2>Über mich</h2>
-            <!-- unordered list for stating the about me section-->
-            <ul style="list-style-type: circle">
-                <li>Informatik Student</li>
-                <li>Interesse an Robotern und KI</li>
-                <li>Hobbymäßig Programmer</li>
-            </ul>
-        </section>
+      <!-- Introduction -->
+      <section id="about-me">
+        <h2>Über mich</h2>
+        <!-- unordered list for stating the about me section-->
+        <ul style="list-style-type: circle">
+          <li>Informatik Student</li>
+          <li>Interesse an Robotern und KI</li>
+          <li>Hobbymäßig Programmer</li>
+        </ul>
+      </section>
 
-        <!-- Skills section of the Curriculum Vitae to show what skills i have -->
-        <section id="skills">
-            <h2>Meine Fähigkeiten</h2>
-            <canvas id="skillsCanvas" style="width: 70%; height: auto;"></canvas>
-        </section>
+      <!-- Skills section of the Curriculum Vitae to show what skills i have -->
+      <section id="skills">
+        <h2>Meine Fähigkeiten</h2>
+        <canvas id="skillsCanvas" style="width: 70%; height: auto"></canvas>
+      </section>
 
-        <!-- Languages section of the Curriculum Vitae to show what languages i speak -->
-        <section id="languages">
-            <h2>Sprachen</h2>
-            <ul style="list-style-type: circle">
-                <li>Englisch</li>
-                <li>Deutsch</li>
-                <li>Hindi</li>
-                <li>Japanisch</li>
-            </ul>
-        </section>
+      <!-- Languages section of the Curriculum Vitae to show what languages i speak -->
+      <section id="languages">
+        <h2>Sprachen</h2>
+        <ul style="list-style-type: circle">
+          <li>Englisch</li>
+          <li>Deutsch</li>
+          <li>Hindi</li>
+          <li>Japanisch</li>
+        </ul>
+      </section>
 
-        <!-- Study and projects placces -->
-        <section id="map-section">
-            <h2>Meine Studien- und Projektorte</h2>
-            <div id="map"></div>
-        </section>
-        <!-- Section for displaying details of the projects-->
-        <section id="details" style="display: none;"></section>
-        <!-- For further details generally hidden from people till the click on more details button-->
+      <!-- Study and projects placces -->
+      <section id="map-section">
+        <h2>Meine Studien- und Projektorte</h2>
+        <div id="map"></div>
+      </section>
+      <!-- Section for displaying details of the projects-->
+      <!-- For further details generally hidden from people till the click on more details button-->
+      <section id="details" style="display: none"></section>
+      <section id="qr-code-section">
+        <h3>Lebenslauf herunterladen</h3>
+        <div id="qr-code"></div>
+      </section>
     </main>
 
     <!-- Footer for social media accounts -->
     <footer>
-        <ul>
-            <li><i class="fab fa-facebook-f"></i></li>
-            <li><i class="fab fa-twitter"></i></li>
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-linkedin-in"></i></li>
-            <li><i class="fab fa-youtube"></i></li>
-        </ul>
+      <ul>
+        <li>
+          <a
+            href="https://www.facebook.com/sarthakbajaj0505"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://x.com/SarthakBaj80867"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/seung_05_05?igsh=NXY4cGp2amdtY29q"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-instagram"> </i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/sarthak-bajaj-698249187/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@sarthakbajaj8798"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+      </ul>
     </footer>
 
     <!-- External Javascript Libraries and scripts -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <!-- QR Code Generator -->
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.min.js"></script>
     <!-- Internal Javascript -->
     <script src="script.js" defer></script>
-</body>
-
+  </body>
 </html>

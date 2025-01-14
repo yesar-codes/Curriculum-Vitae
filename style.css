@@ -1,346 +1,372 @@
 /* Stylesheet for the complete file */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #000000;
-    background-color: #ffffff;
-    transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #000000;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Header-Styling */
 header {
-    position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem;
-        background-color: #4CAF50;
-        color: white;
-        margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #4caf50;
+  color: white;
+  margin-bottom: 1rem;
 }
 
-
-header button {
-    position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgb(9, 161, 226);
-        color: #dfee07;
-        border: none;
-        border-radius: 8px;
-        padding: 10px 15px;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: bold;
-        transition: background-color 0.3s, color 0.3s;
-        float: right;
+#darkModeToggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(9, 161, 226);
+  color: #dfee07;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  float: right;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    width: 100%;
-    position: relative;
-    margin: 0;
-    flex-grow: 1;
-    text-align: center;
+  font-size: 2.5rem;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
 }
 
 main {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 /* Common styling for all the sections */
 section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 section h2 {
-    text-align: center;
-    margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* Styling for the Canvas-Element */
 #skillsCanvas {
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    background: #f4f4f4;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #f4f4f4;
 }
 
 /* Map-area */
 #map {
-    height: 500px;
-    width: 100%;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    margin-top: 1rem;
+  height: 500px;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-top: 1rem;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: #121212;
-    color: #f0f0f0;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
 /* Section backgrounds and text in dark mode */
 body.dark-mode section {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
 }
 
 header.dark-mode {
-    background-color: #333333;
+  background-color: #333333;
 }
 
 body.dark-mode #skillsCanvas {
-    background: #1e1e1e;
-    border: 2px solid #444;
+  background: #1e1e1e;
+  border: 2px solid #444;
 }
 
 body.dark-mode canvas {
-    color: #f0f0f0;
+  color: #f0f0f0;
 }
 
 body.dark-mode #languages ul {
-    color: #f0f0f0;
+  color: #f0f0f0;
 }
 
 body.dark-mode #map {
-    background: #1e1e1e;
-    border-color: #444;
+  background: #1e1e1e;
+  border-color: #444;
 }
 
 body.dark-mode #details {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-    border-color: #444;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-color: #444;
 }
 
 body.dark-mode footer ul li:hover {
-    box-shadow: 0 0 15px #fff;
-    text-shadow: 0 0 15px #fff;
+  box-shadow: 0 0 15px #fff;
+  text-shadow: 0 0 15px #fff;
 }
 
 button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 button.dark-mode {
-    background-color: #333333;
+  background-color: #333333;
 }
 
 button.dark-mode:hover {
-    background-color: #555555;
+  background-color: #555555;
 }
 
 /* Performance Chart Styling */
 #performanceChart {
-    margin: 2rem auto 0;
-    display: block;
-    max-width: 90%;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto 0;
+  display: block;
+  max-width: 90%;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer Section Styling */
 footer {
-    background: #262626;
-    text-align: center;
-    padding: 1.5rem 0;
-    color: white;
-    margin-top: 1rem;
+  background: #262626;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: white;
+  margin-top: 1rem;
 }
 
 footer p {
-    margin-top: 1rem;
-    font-size: 0.9rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Social Media Icons */
 footer ul {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 footer ul li {
-    position: relative;
-    display: inline-block;
-    color: #666;
-    font-size: 24px;
-    height: 50px;
-    width: 50px;
-    background: #171515;
-    line-height: 50px;
-    border-radius: 50%;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: 0.5s;
+  position: relative;
+  display: inline-block;
+  color: #666;
+  font-size: 24px;
+  height: 50px;
+  width: 50px;
+  background: #171515;
+  line-height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 footer ul li:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: inherit;
-    width: inherit;
-    border-radius: 50%;
-    transform: scale(0.9);
-    z-index: -1;
-    transition: 0.5s;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  transform: scale(0.9);
+  z-index: -1;
+  transition: 0.5s;
 }
 
 /* Icon Colors */
 footer ul li:nth-child(1):before {
-    background: #4267b2;
+  background: #4267b2;
 }
 
 footer ul li:nth-child(2):before {
-    background: #1da1f2;
+  background: #1da1f2;
 }
 
 footer ul li:nth-child(3):before {
-    background: #e1306c;
+  background: #e1306c;
 }
 
 footer ul li:nth-child(4):before {
-    background: #2867b2;
+  background: #2867b2;
 }
 
 footer ul li:nth-child(5):before {
-    background: #ff0000;
+  background: #ff0000;
 }
 
 /* Hover Effects for Icons*/
 footer ul li:hover:before {
-    filter: blur(3px);
-    transform: scale(1.2);
+  filter: blur(3px);
+  transform: scale(1.2);
 }
 
 footer ul li:hover {
-    box-shadow: 0 0 15px currentColor;
-    text-shadow: 0 0 15px currentColor;
+  box-shadow: 0 0 15px currentColor;
+  text-shadow: 0 0 15px currentColor;
 }
 
 footer ul li i {
-    color: white;
-    transition: 0.5s;
+  color: white;
+  transition: 0.5s;
 }
 
 footer ul li:hover i {
-    color: currentColor;
+  color: currentColor;
 }
 
 /* Icon Colors on Hover */
 footer ul li:nth-child(1):hover {
-    color: #4267b2;
+  color: #4267b2;
 }
 
 footer ul li:nth-child(2):hover {
-    color: #1da1f2;
+  color: #1da1f2;
 }
 
 footer ul li:nth-child(3):hover {
-    color: #e1306c;
+  color: #e1306c;
 }
 
 footer ul li:nth-child(4):hover {
-    color: #2867b2;
+  color: #2867b2;
 }
 
 footer ul li:nth-child(5):hover {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 /* Details Section */
 #details {
-    padding: 1rem;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
 }
 
 #details h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #details ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+  list-style-type: disc;
+  padding-left: 1.5rem;
 }
 
 #details ul li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Shuriken container styles */
 .shuriken {
-    position: absolute;
-    top: 0%;
-    left: -10vw;
-    width: 120px;
-    height: 120px;
-    background: url('./shuriken.png') no-repeat center center;
-    background-size: contain;
-    animation: throwShuriken 3s linear infinite;
-    pointer-events: none;
-    opacity: 0.8;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 0%;
+  left: -10vw;
+  width: 120px;
+  height: 120px;
+  background: url("./shuriken.png") no-repeat center center;
+  background-size: contain;
+  animation: throwShuriken 3s linear infinite;
+  pointer-events: none;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
 /* Shuriken animation */
 @keyframes throwShuriken {
-    0% {
-        transform: translateX(-10vw) rotate(0deg);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-10vw) rotate(0deg);
+    opacity: 1;
+  }
 
-    100% {
-        transform: translateX(105vw) rotate(720deg);
-        opacity: 0.5;
-    }
+  100% {
+    transform: translateX(105vw) rotate(720deg);
+    opacity: 0.5;
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
+  header h1 {
+    font-size: 1.8rem;
+  }
 
-    #map {
-        height: 300px;
-    }
+  #map {
+    height: 300px;
+  }
 
-      #performanceChart {
-        max-width: 100%;
-    }
+  #performanceChart {
+    max-width: 100%;
+  }
+}
+
+#curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a1a1a, #333);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.8s ease;
+}
+
+.curtain-content {
+  text-align: center;
+}
+
+.curtain-content h1 {
+  font-size: 3rem;
+}
+
+.curtain-content p {
+  font-size: 1.2rem;
 }
