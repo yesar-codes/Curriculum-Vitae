@@ -184,7 +184,7 @@ setTimeout(() => {
 const qrCode = new QRCodeStyling({
   width: 200, // Adjust the size as needed
   height: 200,
-  data: "http://127.0.0.1:5500/SarthakCV.pdf",
+  data: "https://curriculum-vitae-black.vercel.app/SarthakCV.pdf",
   image: "./naruto.jpg",
   dotsOptions: {
     color: "#17eb8c", // QR code color
